@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./stylesjs/styles.css" />
+</head>
+
+<body>
+  <video class="bandera" autoplay muted loop>
+    <source src="./images/IMG_2498.MP4" type="video/mp4" />
+  </video>
+  <div class="container">
+    <div class="row">
+      <header>
+        <div class="encabezado">
+          <div class="encab1">
+            <img src="./images/Screenshot(5).png" alt="tgh" style="@keyframes spinner
+              {
+                from{transform:rotateY(0deg)};
+                to{trasnform:rotateY(-360deg)};
+              }; animation-name:spinner;animation-duration:6s;
+              ;animation-timing-function: linear;animation-iteration-count: infinite; transform-style: preserve-3d;" />
+          </div>
+          <div class="encab2">
+            <img class="carta" src="./images/icono-carta.png" alt="icono" />
+            <a href="mailto:info@tgif.net">info@tgif.net</a>
+          </div>
+        </div>
+      </header>
+      <div class="page-header">
+        <nav class="navbar navbar-default" style="border-radius:15px">
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul id='home-cong' class="nav navbar-nav navbar-right">
+              <li>
+                <a href="home-starter-page.html" style="color:white">Home</a>
+              </li>
+              <li class="dropdown">
+                <a href="home-starter-page.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false" style="color:white">Congress 113 <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="senate-starter-page.html" style="color:white">Senate</a>
+                  </li>
+                  <li>
+                    <a href="house-starter-page.html" style="color:white">House</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="home-starter-page.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false" style="color:white">Attendance <span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="senate-attendance-starter-page.html" style="color:white">Senate</a>
+                  </li>
+                  <li>
+                    <a href="house-attendance-starter-page.html" style="color:white">House</a>
+                  </li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="house-party-loyalty-starter-page.html" style="color:white">Party Loyalty</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </nav>
+      </div>
+    </div>
+    <!--Table container-->
+    <div class="cont">
+      <h2>Congressmen</h2>
+      <div class="col-lg-8  col-xs-12">
+        <p>
+          The major power of the House is to pass federal legislation that
+          affects the entire country, although its bills must also be passed
+          by the Senate and further agreed to by the U.S. President before
+          becoming law (unless both the House and Senate re-pass the
+          legislation with a two-thirds majority in each chamber). The House
+          has some exclusive powers: the power to initiate revenue bills, to
+          impeach officials (impeached officials are subsequently tried in the
+          Senate), and to elect the U.S. President in case there is no
+          majority in the Electoral College.
+        </p>
+        <p>
+          Each U.S. state is represented in the House in proportion to its
+          population as measured in the census, but every state is entitled to
+          at least one representative.
+        </p>
+      </div>
+
+
+      <div class="filtros">
+        <div class="filtro1">
+          <div class="filt">
+            <div class="filt1">
+              <small style="font-weight:bold;color:black">Filter by:</small>
+            </div>
+            <div class="filt2">
+              <div class="alineacion">
+                <label for="republicans">
+                  <input type="checkbox" name=" partido1" id="republicans" value="republicans" />
+                  <span><small style="font-weight:bold;color:black">Republican</small></span>
+                </label>
+              </div>
+              <div class="alineacion">
+                <label for="democrats">
+                  <input type="checkbox" name=" partido2" id="democrats" value="democrats" />
+                  <span><small style="font-weight:bold;color:black">Democrats</small></span>
+                </label>
+              </div>
+              <div class="alineacion">
+                <label for="independents">
+                  <input type="checkbox" name=" partido3" id="independents" value="independents" />
+                  <span><small style="font-weight:bold;color:black">Independent</small></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="filtro2">
+            <div class="filt3">
+              <div class="alineacion">
+                <span><small style="font-weight:bold;color:black">Filtered by State</small></span>
+                <select id="select" style="border-radius: 10px;">
+                  <option value="Default">All</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div id="mostrar" class="collapse">-->
+      <div>
+        <div class="overflow-auto ">
+          <div class="col-lg-12">
+            <div id="alert" class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Please Select Party and State</h4>
+            </div>
+
+            <table id="mostrar" class="table table-responsive table-hover table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Party</th>
+                  <th>State</th>
+                  <th>Seniority</th>
+                  <th>Percentage Votes</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-house"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--</div>-->
+    </div>
+    <footer>
+      <div class="panel-footer"
+        style="  color:black; text-align:center; opacity:.6; border-radius:15px;margin-bottom:25px; margin-top:15px">
+        <div class="pie">
+          <img class="trademark" src="./images/ae.jpg" alt="ae" />
+          <h4 style=" font-weight:bold; color:black">2016|TGIF all rights reserved</h4>
+        </div>
+      </div>
+      <div id="loading"></div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js-folder/houseAttendance.js"></script>
+  </div>
+</body>
+
+</html>
